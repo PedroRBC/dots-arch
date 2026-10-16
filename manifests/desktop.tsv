@@ -1,0 +1,43 @@
+# profile	mode	source	root	destination
+# Seed writable themes first. Only absent destinations are initialized.
+all	seed	seeds/.config/kitty/themes/noctalia.conf	config	kitty/themes/noctalia.conf
+all	seed	seeds/.config/alacritty/themes/noctalia.toml	config	alacritty/themes/noctalia.toml
+all	seed	seeds/.config/btop/themes/noctalia.theme	config	btop/themes/noctalia.theme
+all	seed	seeds/.config/gtk-3.0/noctalia.css	config	gtk-3.0/noctalia.css
+all	seed	seeds/.config/gtk-4.0/noctalia.css	config	gtk-4.0/noctalia.css
+all	seed	seeds/.config/qt6ct/colors/noctalia.conf	config	qt6ct/colors/noctalia.conf
+all	seed	seeds/.config/swash/settings.ini	config	swash/settings.ini
+# Machine dependencies before the Hyprland entry point.
+portable	link	profiles/portable/hypr/machine.lua	config	hypr/config/machine.lua
+desktop	link	profiles/desktop/hypr/machine.lua	config	hypr/config/machine.lua
+all	link	home/.config/hypr/config/variables.lua	config	hypr/config/variables.lua
+portable	link	profiles/portable/hypr/monitors.lua	config	hypr/config/monitors.lua
+desktop	link	profiles/desktop/hypr/monitors.lua	config	hypr/config/monitors.lua
+portable	link	profiles/portable/hypr/xdph.conf	config	hypr/xdph.conf
+desktop	link	profiles/desktop/hypr/xdph.conf	config	hypr/xdph.conf
+all	link	home/.config/hypr/config/animations.lua	config	hypr/config/animations.lua
+all	link	home/.config/hypr/config/colors.lua	config	hypr/config/colors.lua
+all	link	home/.config/hypr/config/decorations.lua	config	hypr/config/decorations.lua
+all	link	home/.config/hypr/config/inputs.lua	config	hypr/config/inputs.lua
+all	link	home/.config/hypr/config/binds.lua	config	hypr/config/binds.lua
+all	link	home/.config/hypr/config/misc.lua	config	hypr/config/misc.lua
+all	link	home/.config/hypr/config/windowrules.lua	config	hypr/config/windowrules.lua
+all	link	home/.config/hypr/config/autostart.lua	config	hypr/config/autostart.lua
+all	link	home/.config/hypr/hyprland.lua	config	hypr/hyprland.lua
+all	link	home/.config/noctalia/config.toml	config	noctalia/config.toml
+all	link	home/.config/fish/conf.d/uv.env.fish	config	fish/conf.d/uv.env.fish
+all	link	home/.config/fish/conf.d/30-pure.fish	config	fish/conf.d/30-pure.fish
+all	link	home/.config/fish/config.fish	config	fish/config.fish
+all	link	home/.config/uwsm/env	config	uwsm/env
+all	link	home/.config/kitty/kitty.conf	config	kitty/kitty.conf
+# Noctalia's post-hook rewrites relative imports: keep this generated file local.
+all	render	seeds/.config/alacritty/alacritty.toml.in	config	alacritty/alacritty.toml
+all	link	home/.config/btop/btop.conf	config	btop/btop.conf
+all	link	home/.config/micro/settings.json	config	micro/settings.json
+all	link	home/.config/micro/colorschemes/catppuccin-macchiato.micro	config	micro/colorschemes/catppuccin-macchiato.micro
+all	link	home/.config/gtk-3.0/settings.ini	config	gtk-3.0/settings.ini
+all	link	home/.config/gtk-3.0/gtk.css	config	gtk-3.0/gtk.css
+all	link	home/.config/gtk-4.0/gtk.css	config	gtk-4.0/gtk.css
+# Qt does not expand /home/$USER in this field. Render a local, backed-up file.
+all	render	seeds/.config/qt6ct/qt6ct.conf.in	config	qt6ct/qt6ct.conf
+all	link	home/.icons/default/index.theme	home	.icons/default/index.theme

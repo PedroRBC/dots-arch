@@ -1,0 +1,76 @@
+# Machine-local overrides and accidental command output.
+/local/
+/private/
+/--help/
+/.claude/settings.local.json
+*.local.lua
+*.local.toml
+*.local.fish
+*.local.conf
+
+# Credentials are never configuration sources.
+.env
+.env.*
+!.env.example
+!.env.template
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+credentials*
+authkey*
+secrets/
+
+# Generated state, histories, caches and backups.
+__pycache__/
+*.py[cod]
+.cache/
+cache/
+state/
+runtime/
+backups/
+*.bak
+*.bak.*
+*.backup
+*.swp
+*.swo
+*~
+*.tmp
+*.log
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.sqlite3-*
+*.db
+*.db-*
+fish_history
+fish_variables
+*_history.json
+recently_used.json
+usage_counts.json
+
+# Do not import entire authenticated app profiles or remote-access keys.
+/home/.config/gh/
+/home/.config/Code/
+/home/.config/chromium/
+/home/.config/google-chrome/
+/home/.config/Bitwarden/
+/home/.config/wayvnc/
+/home/.local/state/
+/home/.local/share/keyrings/
+/home/.ssh/
+/home/.gnupg/
+
+# Noctalia's generated output belongs on the machine, not behind a repo link.
+# Sanitized initial copies under seeds/ are intentionally versionable.
+/home/.config/kitty/themes/noctalia.conf
+/home/.config/alacritty/themes/noctalia.toml
+/home/.config/btop/themes/noctalia.theme
+/home/.config/gtk-3.0/noctalia.css
+/home/.config/gtk-4.0/noctalia.css
+/home/.config/qt6ct/colors/noctalia.conf
+
+# TrueNAS infrastructure stays local and must not be published with the dotfiles.
+/infra/truenas/

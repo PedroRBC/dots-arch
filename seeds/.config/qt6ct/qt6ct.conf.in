@@ -1,0 +1,6 @@
+[Appearance]
+color_scheme_path=@CONFIG_HOME@/qt6ct/colors/noctalia.conf
+custom_palette=true
+icon_theme=breeze
+standard_dialogs=gtk3
+style=Fusion

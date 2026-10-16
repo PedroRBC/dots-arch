@@ -1,0 +1,21 @@
+# Official repositories. Availability is checked before installation.
+hyprland
+noctalia
+uwsm
+xdg-desktop-portal-hyprland
+fish
+fish-pure-prompt
+kitty
+btop
+hyprpicker
+wl-clipboard
+grim
+slurp
+dolphin
+gnome-text-editor
+gnome-calculator
+qt6ct
+adw-gtk-theme
+breeze-icons
+ttf-fira-code
+git

@@ -1,0 +1,4 @@
+# Only when the CachyOS repository is already enabled; never add a repository.
+cachyos-fish-config
+helium-browser-bin
+swash

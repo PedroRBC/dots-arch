@@ -1,0 +1,6 @@
+# Ferramentas Android instaladas no diretório do usuário para o HomeCare.
+set -gx JAVA_HOME $HOME/.local/share/homecare-tools/jdk-17
+set -gx ANDROID_HOME $HOME/Android/Sdk
+set -gx ANDROID_SDK_ROOT $ANDROID_HOME
+set -gx ANDROID_AVD_HOME $HOME/.config/.android/avd
+fish_add_path -g $JAVA_HOME/bin $ANDROID_HOME/platform-tools $ANDROID_HOME/emulator $ANDROID_HOME/cmdline-tools/latest/bin

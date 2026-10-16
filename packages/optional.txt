@@ -1,0 +1,6 @@
+# Extra apps; install only with --with-optional in the packages operation.
+alacritty
+micro
+github-cli
+# Used only by the existing desktop profile's explicit X11 policy.
+xorg-xhost
