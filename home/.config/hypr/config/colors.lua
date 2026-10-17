@@ -1,11 +1,10 @@
--- Cachy colors
+-- ARC: engineering surfaces, cyan focus, amber locked groups.
 
-CACHYLGREEN = "rgba(82dcccff)"
-CACHYMGREEN = "rgba(00aa84ff)"
-CACHYDGREEN = "rgba(007d6fff)"
-CACHYLBLUE  = "rgba(01ccffff)"
-CACHYMBLUE  = "rgba(182545ff)"
-CACHYDBLUE  = "rgba(111826ff)"
-CACHYWHITE  = "rgba(ffffffff)"
-CACHYGREY   = "rgba(ddddddff)"
-CACHYGRAY   = "rgba(798bb2ff)"
+ARC_CYAN    = "rgba(57d9ffff)"
+ARC_BLUE    = "rgba(9bbcffff)"
+ARC_AMBER   = "rgba(ffc078ff)"
+ARC_OUTLINE = "rgba(344f63ff)"
+ARC_SURFACE = "rgba(0b1621ff)"
+
+-- Kept for the existing splash setting in misc.lua.
+CACHYLGREEN = ARC_CYAN

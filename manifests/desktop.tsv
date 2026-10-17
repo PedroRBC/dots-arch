@@ -24,6 +24,10 @@ all	link	home/.config/hypr/config/misc.lua	config	hypr/config/misc.lua
 all	link	home/.config/hypr/config/windowrules.lua	config	hypr/config/windowrules.lua
 all	link	home/.config/hypr/config/autostart.lua	config	hypr/config/autostart.lua
 all	link	home/.config/hypr/hyprland.lua	config	hypr/hyprland.lua
+# ARC assets are static; generated application themes above remain writable seeds.
+all	link	home/.config/noctalia/palettes/Arc.json	config	noctalia/palettes/Arc.json
+all	link	assets/arc/arc-landscape.png	config	noctalia/wallpapers/arc-landscape.png
+all	link	assets/arc/arc-portrait.png	config	noctalia/wallpapers/arc-portrait.png
 all	link	home/.config/noctalia/config.toml	config	noctalia/config.toml
 all	link	home/.config/fish/conf.d/uv.env.fish	config	fish/conf.d/uv.env.fish
 all	link	home/.config/fish/conf.d/30-pure.fish	config	fish/conf.d/30-pure.fish

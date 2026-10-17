@@ -39,8 +39,19 @@ def main():
         path = REPO / source
         check(path.is_file() and not path.is_symlink(), f"Missing regular source: {source}")
         check(path.resolve().is_relative_to(REPO), f"External source: {source}")
-        check("/home/pedro" not in path.read_text(), f"Hardcoded personal home: {source}")
-        check(mode != "render" or "@CONFIG_HOME@" in path.read_text(), f"Missing render token: {source}")
+        if path.suffix == ".png":
+            import struct
+            data = path.read_bytes()
+            check(data[:8] == b"\x89PNG\r\n\x1a\n" and data[12:16] == b"IHDR",
+                  f"Invalid PNG: {source}")
+            width, height = struct.unpack(">II", data[16:24])
+            expected = (1536, 2732) if "portrait" in path.stem else (3840, 2160)
+            check((width, height) == expected, f"Unexpected wallpaper dimensions: {source}")
+            check(mode == "link", f"PNG must be a static link: {source}")
+        else:
+            text = path.read_text()
+            check("/home/pedro" not in text, f"Hardcoded personal home: {source}")
+            check(mode != "render" or "@CONFIG_HOME@" in text, f"Missing render token: {source}")
         rows.append(fields)
 
     for profile in ("portable", "desktop"):
